@@ -1,0 +1,28 @@
+apiVersion: v1alpha
+kind: xcuitest
+sauce:
+  tunnel:
+    name: xcuitest-so-tunnel
+    owner: sminch
+  region: us-west-1
+  concurrency: 20
+  metadata:
+    build: XCUITest Simulator on Docker Compose
+xcuitest:
+  app: storage:filename=WebKitBrowser.zip
+  testApp: storage:filename=WebKitBrowserUITests-Runner.zip
+
+suites:
+  - name: "WebKitBrowser to Localhost"
+    simulators:
+      - name: "iPhone 14 Simulator"
+        orientation: portrait
+        platformVersions:
+          - "16.2"
+
+artifacts:
+  download:
+    when: always
+    match:
+      - "junit.xml"
+    directory: ./artifacts/

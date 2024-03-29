@@ -1,0 +1,11 @@
+<testsuites name="All tests" tests="5" failures="0">
+    <testsuite name="WebKitBrowserUITests.WebKitBrowserUITests" tests="1" failures="0">
+        <testcase classname="WebKitBrowserUITests.WebKitBrowserUITests" name="testLocalhost" time="10.477" />
+    </testsuite>
+    <testsuite name="WebKitBrowserUITests.WebKitBrowserUITestsLaunchTests" tests="4" failures="0">
+        <testcase classname="WebKitBrowserUITests.WebKitBrowserUITestsLaunchTests" name="testLaunch" time="12.409" />
+        <testcase classname="WebKitBrowserUITests.WebKitBrowserUITestsLaunchTests" name="testLaunch" time="14.161" />
+        <testcase classname="WebKitBrowserUITests.WebKitBrowserUITestsLaunchTests" name="testLaunch" time="10.302" />
+        <testcase classname="WebKitBrowserUITests.WebKitBrowserUITestsLaunchTests" name="testLaunch" time="10.853" />
+    </testsuite>
+</testsuites>
