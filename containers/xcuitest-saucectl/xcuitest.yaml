@@ -3,7 +3,7 @@ kind: xcuitest
 sauce:
   tunnel:
     name: xcuitest-so-tunnel
-    owner: sminch
+    owner: $SAUCE_USERNAME
   region: us-west-1
   concurrency: 20
   metadata:
