@@ -1,5 +1,12 @@
 # Running XCUITests on iOS Simulators using Docker Compose
 
+## Docker Version
+
+This example is based on the following versions:
+Docker Desktop = 4.26.1 (131620)
+Docker Engine = 24.0.7
+Docker Compose = v2.23.3-desktop.2
+
 ## Docker & Sauce Credentials
 
 Set your Docker & Sauce Labs credentials as environment variables in your .zshrc or .bashrc file:
@@ -19,17 +26,14 @@ Upload the the two ZIP files located in the "apps" directory to the [App Managem
 
 ## Create the Docker images
 
-Navigate to the "containers" directory:
-`cd containers`
-
 Build the node-server container:
-`docker buildx build -t $DOCKER_USERNAME/node-server:0.0.1 --platform=linux/amd64 node-server/`
+`docker buildx build -t $DOCKER_USERNAME/node-server:0.0.1 --platform=linux/amd64 containers/node-server/`
 
 Push the Docker image:
 `docker push $DOCKER_USERNAME/node-server:0.0.1`
 
 Build the xcuitest container:
-`docker buildx build -t $DOCKER_USERNAME/xcuitest:0.0.1 --platform=linux/amd64 xcuitest-saucectl/`
+`docker buildx build -t $DOCKER_USERNAME/xcuitest:0.0.1 --platform=linux/amd64 containers/xcuitest-saucectl/`
 
 Push the Docker image:
 `docker push $DOCKER_USERNAME/xcuitest:0.0.1`
