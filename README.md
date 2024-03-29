@@ -23,16 +23,16 @@ Navigate to the "containers" directory:
 `cd containers`
 
 Build the node-server container:
-`docker buildx build -t node-server:0.0.1 --platform=linux/amd64 node-server/`
+`docker buildx build -t $DOCKER_USERNAME/node-server:0.0.1 --platform=linux/amd64 node-server/`
 
 Push the Docker image:
-`docker push node-server:0.0.1`
+`docker push $DOCKER_USERNAME/node-server:0.0.1`
 
 Build the xcuitest container:
-`docker buildx build -t xcuitest:0.0.1 --platform=linux/amd64 xcuitest-saucectl/`
+`docker buildx build -t $DOCKER_USERNAME/xcuitest:0.0.1 --platform=linux/amd64 xcuitest-saucectl/`
 
 Push the Docker image:
-`docker push xcuitest:0.0.1`
+`docker push $DOCKER_USERNAME/xcuitest:0.0.1`
 
 ## Run the containers
 
