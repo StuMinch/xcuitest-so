@@ -17,10 +17,6 @@ Run "source ~/.zshrc" or "source ~/.bashrc" for the changes to take effect.
 
 Upload the the two ZIP files located in the "apps" directory to the [App Management](https://app.saucelabs.com/app-management) section of your Sauce Labs account.
 
-## Configure saucectl
-
-Run the command "saucectl configure" and it should automatically detect the Sauce Labs credentials that you just set as environment variables.
-
 ## Create the Docker images
 
 Navigate to the "containers" directory:
