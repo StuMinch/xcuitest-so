@@ -3,9 +3,10 @@
 ## Docker Version
 
 This example is based on the following versions:
-Docker Desktop = 4.26.1 (131620)
-Docker Engine = 24.0.7
-Docker Compose = v2.23.3-desktop.2
+
+- Docker Desktop = 4.26.1 (131620)
+- Docker Engine = 24.0.7
+- Docker Compose = v2.23.3-desktop.2
 
 ## Docker & Sauce Credentials
 
