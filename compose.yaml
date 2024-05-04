@@ -1,12 +1,12 @@
 version: "3"
 services:
   xcuitest:
-    image: xcuitest:0.0.1
+    image: sminch/xcuitest:0.0.7
     environment:
       SAUCE_USERNAME: ${SAUCE_USERNAME}
       SAUCE_ACCESS_KEY: ${SAUCE_ACCESS_KEY}
       SAUCE_OUTPUT_FORMAT: "text"
-    entrypoint: bash -c "sleep 30 && saucectl run -c /opt/xcuitest.yaml"
+    entrypoint: "saucectl run -c /opt/xcuitest.yaml"
     volumes: 
       - ./containers/xcuitest-saucectl/xcuitest.yaml:/opt/xcuitest.yaml
     depends_on:
@@ -24,6 +24,8 @@ services:
       - ./sauce-connect.yaml:/opt/sauce-connect.yaml
 
   node-server:
-    image: node-server:0.0.1
+    image: sminch/node-server:0.0.1
     network_mode: host
     entrypoint: "node /opt/app.js"
+    ports:
+      - "8080:8080"

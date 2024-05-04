@@ -3,7 +3,7 @@ kind: xcuitest
 sauce:
   tunnel:
     name: xcuitest-so-tunnel
-    owner: $SAUCE_USERNAME
+    timeout: "2m"
   region: us-west-1
   concurrency: 20
   metadata:
