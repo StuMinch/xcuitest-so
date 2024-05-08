@@ -4,7 +4,7 @@ sauce:
   region: us-west-1
 suites:
 - name: xcuitest
-  image: sminch/xcuitest:0.0.7
+  image: sminch/xcuitest:0.0.8
   workload: webdriver
   entrypoint: bash -c "sleep 30 && saucectl run -c /opt/xcuitest.yaml"
   env:

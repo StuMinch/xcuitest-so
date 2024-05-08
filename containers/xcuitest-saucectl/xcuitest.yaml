@@ -7,7 +7,7 @@ sauce:
   region: us-west-1
   concurrency: 20
   metadata:
-    build: XCUITest Simulator on Docker Compose
+    build: XCUITest Simulator on Sauce Orchestrate
 xcuitest:
   app: storage:filename=WebKitBrowser.zip
   testApp: storage:filename=WebKitBrowserUITests-Runner.zip
